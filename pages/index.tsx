@@ -23,6 +23,12 @@ export default function Home() {
         <button onClick={handleClick}>
           Click Me to Go To the Product 4 Review 6 Route
         </button>{" "}
+        <Link href="/photos">Photos</Link>
+        <br />
+        <Link href="/posts">Posts</Link>
+        <br />
+        <Link href="/comments">Photos</Link>
+        <br />
         {/* Navigating Programmatically  */}
       </div>
     </main>

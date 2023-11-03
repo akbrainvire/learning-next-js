@@ -34,6 +34,7 @@ export async function getStaticPaths() {
   //   });
   return {
     paths: [
+      // paths -> array above
       {
         params: { postId: "1" },
       },

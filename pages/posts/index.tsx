@@ -47,6 +47,6 @@ export async function getStaticProps() {
 
     revalidate: 10, // we are asking next js to revalidate this post list page every 10 seconds this will ensure the updated posts
     // this will ensure the updated posts data is served almost immediately without having to rebuild the entire app
-    // this is called INCREMENT STATIC REGENERATION (STALE WHILE REVALIDATE)
+    // this is called INCREMENTAL STATIC REGENERATION (STALE WHILE REVALIDATE)
   };
 }
