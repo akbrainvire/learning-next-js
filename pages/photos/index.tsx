@@ -1,6 +1,7 @@
 //Example of SERVER SIDE RENDERING
 
 //In server side rendering the page will not get created in the build even after by request .
+import Image from "next/image";
 import React from "react";
 
 const Photos = ({ photos }: any) => {
@@ -9,8 +10,21 @@ const Photos = ({ photos }: any) => {
       {photos.map((photo: any) => {
         return (
           <>
-            <b>{photo.userId} </b>
+            {/* <b>{photo.userId} </b> */}
             <i>{photo.title}</i>
+            <img
+              src={`${photo.url}.jpg`}
+              alt="photos"
+              width="600"
+              height="600"
+            />
+            {/* <Image                 //This will improve performance and lazy loading also convert the image to more optimized way
+              src={`${photo.url}.jpg`} // for showing blur image untill the photo is loaded we can use placeholder attribute to blur and place the
+              alt="photos"             // also we have to use the import img from folder to get this functionality we cannot use dynamic src in image tag
+              width="600"               //This avoids layout shift  // and if you want to work with dynamic image then use blueDataURL prop.
+              // placeholder="blur"
+              height="600"
+            /> */}
             <br />
           </>
         );
@@ -41,7 +55,7 @@ export async function getServerSideProps() {
       getServerSideProps will run at request time 
   */
 
-  const response = await fetch("https://jsonplaceholder.typicode.com/albums");
+  const response = await fetch("https://jsonplaceholder.typicode.com/photos");
   const data = await response.json();
 
   return {

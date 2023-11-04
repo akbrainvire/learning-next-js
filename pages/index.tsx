@@ -21,15 +21,16 @@ export default function Home() {
         <Link href="/docs">Docs</Link>
         <br />
         <button onClick={handleClick}>
+          {/* Navigating Programmatically  */}
           Click Me to Go To the Product 4 Review 6 Route
         </button>{" "}
+        <br />
         <Link href="/photos">Photos</Link>
         <br />
         <Link href="/posts">Posts</Link>
         <br />
-        <Link href="/comments">Photos</Link>
+        <Link href="/comments">Comments</Link>
         <br />
-        {/* Navigating Programmatically  */}
       </div>
     </main>
   );

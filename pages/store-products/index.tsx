@@ -1,3 +1,6 @@
+//Example of Pre-Rendering with Client Side rendering
+
+import { GetServerSideProps } from "next";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
 

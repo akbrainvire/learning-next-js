@@ -4,15 +4,18 @@ Static Generation
 A method of pre-rendering where the HTML pages are generated at build time
 Pages can be built once, cached by a CDN and served to clients almost instantly Example: Marketing or Blogging site
 For a normal page, use getStatic Props function to fetch the data ahead of time
-For a dynamic page, you also need the getStaticPaths function
+For a dynamic page, you also need the getStaticPaths function -----------------> we use getStaticPath which returns the object with keys as paths as an array of objects with key params that is also an object with id variable as key (that is file name) with value the values that we want to be pre-rendered and fallback key which can be true, false, "blocking".
 fallback: false | true | 'blocking'
 Pages cannot be updated without a full re-build
 Incremental Static Regeneration
 
-Server-side rendering
+Server-side rendering(SSR)
 Fetch data at request time
 Personalize data based on user information in the incoming request
 Example: News listing page
 getServerSide Props function helps with SSR data fetching
 Combining pre-rendering with client-side data fetching
 Shallow routing - Routing without calling getStaticProps/getServerSide Props
+
+ssr-> request
+ssg-> build
